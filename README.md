@@ -1,6 +1,7 @@
-# boat
+# Boat Clone App 
+An E-commerce app for BOAT lifestyle products.
 
-E-commerce app for BOAT lifestyle products.
+![start with why](https://img.shields.io/badge/status-in%20progress-brightgreen.svg?style=flat)
 
 ## Getting Started
 
