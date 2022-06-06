@@ -1,0 +1,185 @@
+name: boat
+description: E-commerce app for BOAT lifestyle products.
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.16.1 <3.0.0"
+
+# Dependencies specify other packages that your package needs in order to work.
+# To automatically upgrade your package dependencies to the latest versions
+# consider running `flutter pub upgrade --major-versions`. Alternatively,
+# dependencies can be manually updated by changing the version numbers below to
+# the latest version available on pub.dev. To see which dependencies have newer
+# versions available, run `flutter pub outdated`.
+dependencies:
+  flutter:
+    sdk: flutter
+
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.2
+
+  # Image Carousel Slider
+  carousel_slider: ^4.0.0
+
+  # Slider dots indicator
+  smooth_page_indicator: ^0.3.0-nullsafety.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # The "flutter_lints" package below contains a set of recommended lints to
+  # encourage good coding practices. The lint set provided by the package is
+  # activated in the `analysis_options.yaml` file located at the root of your
+  # package. See that file for information about deactivating specific lint
+  # rules and activating additional ones.
+  flutter_lints: ^1.0.0
+
+  flutter_launcher_icons: "^0.9.2"
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/boatSymbol.png"
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/ad1.jpg
+    - assets/ad2.jpg
+    - assets/ad3.jpg
+    - assets/ad4.jpg
+    - assets/ad5.jpg
+
+    - assets/categoryHeadphones.jpg
+    - assets/categoryRockerz.jpg
+    - assets/categorySmartwatches.jpg
+    - assets/categoryAirdopes.jpg
+    - assets/categorySpeakers.jpg
+
+    - assets/boatHead1.jpg
+    - assets/boatHead2.jpg
+    - assets/boatHead3.jpg
+    - assets/boatHead4.jpg
+
+    - assets/brandvertise.jpg
+    - assets/profile_avatar.png
+    - assets/logo.png
+    - assets/boatSymbol.png
+
+    - assets/products/neckbands/boat100.jpg
+    - assets/products/neckbands/rockerz255.jpg
+    - assets/products/neckbands/rockerz255f.jpg
+    - assets/products/neckbands/rockerz255neo.jpg
+    - assets/products/neckbands/rockerz260.jpg
+    - assets/products/neckbands/rockerz261.jpg
+    - assets/products/neckbands/rockerz333.jpg
+    - assets/products/neckbands/rockerz333pro.jpg
+    - assets/products/neckbands/rockerz333red.jpg
+    - assets/products/neckbands/rockerz375.jpg
+    - assets/products/neckbands/trebel235.jpg
+    - assets/products/neckbands/trebel255pro.jpg
+
+    - assets/products/airdopes/airdopes131.jpg
+    - assets/products/airdopes/airdopes131captainamerica.jpg
+    - assets/products/airdopes/airdopes131ironman.jpg
+    - assets/products/airdopes/airdopes141.jpg
+    - assets/products/airdopes/airdopes381.jpg
+    - assets/products/airdopes/airdopes421.jpg
+    - assets/products/airdopes/airdopes441.jpg
+    - assets/products/airdopes/airdopes441pro.jpg
+    - assets/products/airdopes/airdopes451.jpg
+    - assets/products/airdopes/airdopes641.jpg
+
+    - assets/products/headphones/immortal1300.png
+    - assets/products/headphones/immortal1300.png
+    - assets/products/headphones/immortal200.png
+    - assets/products/headphones/immortal700.png
+    - assets/products/headphones/nirvana1007anc.png
+    - assets/products/headphones/rockeraz550.jpg
+    - assets/products/headphones/rockerz370.png
+    - assets/products/headphones/rockerz400.png
+    - assets/products/headphones/rockerz425.jpg
+    - assets/products/headphones/rockerz450.jpg
+    - assets/products/headphones/rockerz510.jpg
+    - assets/products/headphones/rockerz650.png
+
+    - assets/products/wired/bassheads100.png
+    - assets/products/wired/bassheads103.png
+    - assets/products/wired/bassheads162.png
+    - assets/products/wired/bassheads225.png
+    - assets/products/wired/bassheads242.png
+    - assets/products/wired/bassheads242blue.png
+    - assets/products/wired/bassheads242lime.png
+    - assets/products/wired/trebel103.png
+
+    - assets/products/speakers/blitz2000.png
+    - assets/products/speakers/partypal50.png
+    - assets/products/speakers/partypal60.png
+    - assets/products/speakers/rugby.png
+    - assets/products/speakers/stone1200f.png
+    - assets/products/speakers/stone1450.png
+    - assets/products/speakers/stone180.png
+    - assets/products/speakers/stone200.png
+    - assets/products/speakers/stone500.png
+
+    - assets/products/smartwatches/storm.png
+    - assets/products/smartwatches/watchblaze.png
+    - assets/products/smartwatches/watchflash.png
+    - assets/products/smartwatches/watchiris.png
+    - assets/products/smartwatches/watchmystiq.png
+    - assets/products/smartwatches/watchvertex.png
+    - assets/products/smartwatches/watchwavepro.png
+    - assets/products/smartwatches/watchxtend.png
+    - assets/products/smartwatches/watchzenit.png
+
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/assets-and-images/#resolution-aware.
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/assets-and-images/#from-packages
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+
+  fonts:
+  - family: Nunito
+    fonts:
+      - asset: fonts/Nunito.ttf
+  - family: Poppins
+    fonts:
+      - asset: fonts/Poppins-Regular.ttf
+
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages
