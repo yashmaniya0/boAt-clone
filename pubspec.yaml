@@ -72,94 +72,13 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/ad1.jpg
-    - assets/ad2.jpg
-    - assets/ad3.jpg
-    - assets/ad4.jpg
-    - assets/ad5.jpg
-
-    - assets/categoryHeadphones.jpg
-    - assets/categoryRockerz.jpg
-    - assets/categorySmartwatches.jpg
-    - assets/categoryAirdopes.jpg
-    - assets/categorySpeakers.jpg
-
-    - assets/boatHead1.jpg
-    - assets/boatHead2.jpg
-    - assets/boatHead3.jpg
-    - assets/boatHead4.jpg
-
-    - assets/brandvertise.jpg
-    - assets/profile_avatar.png
-    - assets/logo.png
-    - assets/boatSymbol.png
-
-    - assets/products/neckbands/boat100.jpg
-    - assets/products/neckbands/rockerz255.jpg
-    - assets/products/neckbands/rockerz255f.jpg
-    - assets/products/neckbands/rockerz255neo.jpg
-    - assets/products/neckbands/rockerz260.jpg
-    - assets/products/neckbands/rockerz261.jpg
-    - assets/products/neckbands/rockerz333.jpg
-    - assets/products/neckbands/rockerz333pro.jpg
-    - assets/products/neckbands/rockerz333red.jpg
-    - assets/products/neckbands/rockerz375.jpg
-    - assets/products/neckbands/trebel235.jpg
-    - assets/products/neckbands/trebel255pro.jpg
-
-    - assets/products/airdopes/airdopes131.jpg
-    - assets/products/airdopes/airdopes131captainamerica.jpg
-    - assets/products/airdopes/airdopes131ironman.jpg
-    - assets/products/airdopes/airdopes141.jpg
-    - assets/products/airdopes/airdopes381.jpg
-    - assets/products/airdopes/airdopes421.jpg
-    - assets/products/airdopes/airdopes441.jpg
-    - assets/products/airdopes/airdopes441pro.jpg
-    - assets/products/airdopes/airdopes451.jpg
-    - assets/products/airdopes/airdopes641.jpg
-
-    - assets/products/headphones/immortal1300.png
-    - assets/products/headphones/immortal1300.png
-    - assets/products/headphones/immortal200.png
-    - assets/products/headphones/immortal700.png
-    - assets/products/headphones/nirvana1007anc.png
-    - assets/products/headphones/rockeraz550.jpg
-    - assets/products/headphones/rockerz370.png
-    - assets/products/headphones/rockerz400.png
-    - assets/products/headphones/rockerz425.jpg
-    - assets/products/headphones/rockerz450.jpg
-    - assets/products/headphones/rockerz510.jpg
-    - assets/products/headphones/rockerz650.png
-
-    - assets/products/wired/bassheads100.png
-    - assets/products/wired/bassheads103.png
-    - assets/products/wired/bassheads162.png
-    - assets/products/wired/bassheads225.png
-    - assets/products/wired/bassheads242.png
-    - assets/products/wired/bassheads242blue.png
-    - assets/products/wired/bassheads242lime.png
-    - assets/products/wired/trebel103.png
-
-    - assets/products/speakers/blitz2000.png
-    - assets/products/speakers/partypal50.png
-    - assets/products/speakers/partypal60.png
-    - assets/products/speakers/rugby.png
-    - assets/products/speakers/stone1200f.png
-    - assets/products/speakers/stone1450.png
-    - assets/products/speakers/stone180.png
-    - assets/products/speakers/stone200.png
-    - assets/products/speakers/stone500.png
-
-    - assets/products/smartwatches/storm.png
-    - assets/products/smartwatches/watchblaze.png
-    - assets/products/smartwatches/watchflash.png
-    - assets/products/smartwatches/watchiris.png
-    - assets/products/smartwatches/watchmystiq.png
-    - assets/products/smartwatches/watchvertex.png
-    - assets/products/smartwatches/watchwavepro.png
-    - assets/products/smartwatches/watchxtend.png
-    - assets/products/smartwatches/watchzenit.png
-
+    - assets/
+    - assets/products/airdopes/
+    - assets/products/headphones/
+    - assets/products/neckbands/
+    - assets/products/smartwatches/
+    - assets/products/speakers/
+    - assets/products/wired/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

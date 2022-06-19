@@ -48,6 +48,9 @@ class _HomePageState extends State<HomePage> {
   int navIndex = 0;
   List allContents = [HomeContents(), ShopContents(), CartContents(), ProfileContents()];
 
+  // for cart contents
+  List cartProducts = [];
+
 
   @override
   Widget build(BuildContext context) {
