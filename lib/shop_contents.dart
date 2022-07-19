@@ -1,8 +1,10 @@
 import 'dart:io';
 import 'dart:math';
 
+import 'package:get/get.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:boat/cart_controller.dart';
 
 class ShopContents extends StatefulWidget {
   final Map products;
@@ -59,127 +61,41 @@ class _ShopContentsState extends State<ShopContents>
         child: TabBarView(
           controller: _tabController,
           children: [
-            _buildAirdopesTab(),
-            _buildHeadphonesTab(),
-            _buildNeckbandsTab(),
-            _buildWiredTab(),
-            _buildSpeakersTab(),
-            _buildSmartwatchesTab(),
+            _buildProductsTab('airdopes'),
+            _buildProductsTab('headphones'),
+            _buildProductsTab('neckbands'),
+            _buildProductsTab('wired'),
+            _buildProductsTab('speakers'),
+            _buildProductsTab('smartwatches'),
           ],
         ),
       ),
     ]);
   }
 
-  Widget _buildNeckbandsTab() {
+  Widget _buildProductsTab(String category) {
     return Container(
       padding: EdgeInsets.only(top: 15),
-      child: ListView(
-        children: allProducts['neckbands'].map<Widget>((productData){
-          return _buildProductCard(
-              productData['productImage'],
-              productData['productName'],
-              productData['filledStars'],
-              productData['reviews'],
-              productData['sellingPrice'],
-              productData['mrp']
-          );
-        }).toList(),
+      child: ListView.builder(
+        itemCount: allProducts[category].length,
+        itemBuilder: (BuildContext context, int ix){
+          return _buildProductCard(allProducts, category, ix);
+        },
       ),
     );
   }
 
-  Widget _buildAirdopesTab() {
-    return Container(
-      padding: EdgeInsets.only(top: 15),
-      child: ListView(
-        children: allProducts['airdopes'].map<Widget>((productData){
-          return _buildProductCard(
-              productData['productImage'],
-              productData['productName'],
-              productData['filledStars'],
-              productData['reviews'],
-              productData['sellingPrice'],
-              productData['mrp']
-          );
-        }).toList(),
-      ),
-    );
-  }
+  Widget _buildProductCard(Map<dynamic, dynamic> allProducts, String category, int index) {
 
-  Widget _buildHeadphonesTab() {
-    return Container(
-      padding: EdgeInsets.only(top: 15),
-      child: ListView(
-        children: allProducts['headphones'].map<Widget>((productData){
-          return _buildProductCard(
-              productData['productImage'],
-              productData['productName'],
-              productData['filledStars'],
-              productData['reviews'],
-              productData['sellingPrice'],
-              productData['mrp']
-          );
-        }).toList(),
-      ),
-    );
-  }
+    final cartController = Get.put(CartController());
 
-  Widget _buildWiredTab() {
-    return Container(
-      padding: EdgeInsets.only(top: 15),
-      child: ListView(
-        children: allProducts['wired'].map<Widget>((productData){
-          return _buildProductCard(
-              productData['productImage'],
-              productData['productName'],
-              productData['filledStars'],
-              productData['reviews'],
-              productData['sellingPrice'],
-              productData['mrp']
-          );
-        }).toList(),
-      ),
-    );
-  }
+    String productImage = allProducts[category][index]['productImage'];
+    String productName = allProducts[category][index]['productName'];
+    int filledStars = allProducts[category][index]['filledStars'];
+    int reviews = allProducts[category][index]['reviews'];
+    int sellingPrice = allProducts[category][index]['sellingPrice'];
+    int mrp = allProducts[category][index]['mrp'];
 
-  Widget _buildSpeakersTab() {
-    return Container(
-      padding: EdgeInsets.only(top: 15),
-      child: ListView(
-        children: allProducts['speakers'].map<Widget>((productData){
-          return _buildProductCard(
-              productData['productImage'],
-              productData['productName'],
-              productData['filledStars'],
-              productData['reviews'],
-              productData['sellingPrice'],
-              productData['mrp']
-          );
-        }).toList(),
-      ),
-    );
-  }
-
-  Widget _buildSmartwatchesTab() {
-    return Container(
-      padding: EdgeInsets.only(top: 15),
-      child: ListView(
-        children: allProducts['smartwatches'].map<Widget>((productData){
-          return _buildProductCard(
-              productData['productImage'],
-              productData['productName'],
-              productData['filledStars'],
-              productData['reviews'],
-              productData['sellingPrice'],
-              productData['mrp']
-          );
-        }).toList(),
-      ),
-    );
-  }
-
-  Widget _buildProductCard(String productImage, String productName, int filledStars, int reviews, int sellingPrice, int mrp) {
     int discount = ((mrp - sellingPrice) / mrp * 100).round();
     RegExp expression = RegExp(r'(\d{1,3})(?=(\d{3})+(?!\d))');
     String fSellPrice = sellingPrice
@@ -313,7 +229,7 @@ class _ShopContentsState extends State<ShopContents>
                           height: 40,
                           margin: EdgeInsets.only(right: 12),
                           decoration: BoxDecoration(
-                            color: Color.fromRGBO(220, 20, 30, 1),
+                            color: Color.fromRGBO(220, 20, 0, 0.9),
                             borderRadius: BorderRadius.all(Radius.circular(5)),
                           ),
                           child: Material(
@@ -321,10 +237,11 @@ class _ShopContentsState extends State<ShopContents>
                             child: InkWell(
                               highlightColor: Color.fromRGBO(0, 0, 0, 0.1),
                               splashColor:
-                                  Color.fromRGBO(0, 0, 0, 0.10196078431372549),
+                                  Color.fromRGBO(0, 0, 0, 0.2),
                               borderRadius: BorderRadius.all(Radius.circular(5)),
-                              onTap: () {
+                              onTap: () {                                         // ADD TO CART Button fn
                                 print('add to cart tapped');
+                                cartController.addProduct(allProducts[category][index]);
                               },
                               child: Center(
                                 child: Text(

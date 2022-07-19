@@ -45,7 +45,7 @@ class _ProfileContentsState extends State<ProfileContents> {
         Container(
           height: 5,
           margin: EdgeInsets.only(left: 20, right: 20),
-          color: Colors.red,
+          color: Color.fromRGBO(255, 30, 10, 0.85),
         ),
         SizedBox(height: 10),
         Container(

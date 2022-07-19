@@ -1,10 +1,12 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:boat/home_contents.dart';
 import 'package:boat/shop_contents.dart';
 import 'package:boat/cart_contents.dart';
 import 'package:boat/profile_contents.dart';
+import 'package:boat/cart_controller.dart';
 
 void main() => runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -39,6 +41,7 @@ class _HomePageState extends State<HomePage> {
 
 
   // for cart contents
+  final cartController = Get.put(CartController());
   List cartProducts = [];
   Map allProducts = {
     "airdopes": [
