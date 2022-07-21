@@ -5,39 +5,83 @@ import 'package:flutter/material.dart';
 import 'package:boat/cart_controller.dart';
 
 class CartContents extends StatefulWidget {
-  const CartContents({Key? key}) : super(key: key);
+  final Function toShopContents;
+  const CartContents({Key? key, required this.toShopContents}) : super(key: key);
 
   @override
-  State<CartContents> createState() => _CartContentsState();
+  State<CartContents> createState() => _CartContentsState(toShopContents);
 }
 
 class _CartContentsState extends State<CartContents> {
 
+  Function toShopContents;
   CartController controller = Get.find();
+
+  _CartContentsState(this.toShopContents);
 
   @override
   Widget build(BuildContext context) {
     if (controller.itemsInCart==0){
-      return Container(
-        decoration: BoxDecoration(
-          color: Color.fromRGBO(0, 0, 0, 0.7),
-        ),
-        child: Center(
-          child: Text(
-            'Shopping Cart \nis Empty !!!',
-            style: TextStyle(
-              color: Color.fromRGBO(250, 250, 250, 0.85),
-              fontSize: 30,
+      return Stack(
+        children: [
+          Container(
+            margin: EdgeInsets.only(left: 35, top: 40),
+              child: Image.asset('assets/empty_cart.png')
+          ),
+          Container(
+            height: 500,
+            margin: EdgeInsets.only(top: 120),
+            child: const Center(
+              child: Text(
+                'Your cart is empty',
+                style: TextStyle(
+                  color: Color.fromRGBO(250, 250, 250, 0.80),
+                  fontFamily: 'Nunito',
+                  fontWeight: FontWeight.w900,
+                  fontSize: 35,
+                ),
+              ),
             ),
           ),
-        ),
+          Container(
+            margin: EdgeInsets.only(top: 420, left: 95),
+            height: 50,
+            width: 200,
+            decoration: BoxDecoration(
+              color: Color.fromRGBO(250, 30, 0, 0.85),
+              borderRadius: BorderRadius.all(Radius.circular(5)),
+            ),
+            child: Material(
+              color: Colors.transparent,
+              child: InkWell(
+                highlightColor: Color.fromRGBO(0, 0, 0, 0.1),
+                splashColor:
+                Color.fromRGBO(0, 0, 0, 0.25),
+                borderRadius: BorderRadius.all(Radius.circular(5)),
+                onTap: () async{
+                  await Future.delayed(Duration(milliseconds: 30));
+                  toShopContents();
+                },
+                child: Center(
+                  child: Text(
+                    'Start Shopping',
+                    style: TextStyle(
+                      color: Color.fromRGBO(250, 250, 250, 0.85),
+                      fontSize: 18,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ],
       );
     }
     return Obx(
       ()=> Column(
         children: [
           Container(
-            height: 580,
+            height: 520, //580
             child: ListView.builder(
               itemCount: controller.products.length,
                 itemBuilder: (BuildContext context, int ix){
@@ -45,12 +89,12 @@ class _CartContentsState extends State<CartContents> {
                 },
             ),
           ),
-          SizedBox(height:10),
+          SizedBox(height:7),
           Container(
             height: 80,
             width: 365,
             decoration: BoxDecoration(
-              color: Color.fromRGBO(250, 250, 250, 0.12),
+              color: Color.fromRGBO(250, 250, 250, 0.16),
               borderRadius: BorderRadius.all(Radius.circular(10)),
             ),
             child: Row(
@@ -162,7 +206,7 @@ class _CartContentsState extends State<CartContents> {
                   Container(
                     width: 227,
                     margin: EdgeInsets.only(top: 5, bottom: 5),
-                    padding: EdgeInsets.only(left: 12, bottom: 10),
+                    padding: EdgeInsets.only(left: 12, bottom: 5),
                     decoration: const BoxDecoration(
                       color: Color.fromRGBO(255, 255, 255, 0.9),
                       borderRadius: BorderRadius.all(Radius.circular(12)),

@@ -16,12 +16,6 @@ class CartController extends GetxController{
         'mrp':product['mrp'],
       }.obs;
     }
-    Get.snackbar(
-      'Product Added Successfully!!!',
-      'Product : ${product['productName']} added to the cart.',
-      snackPosition: SnackPosition.BOTTOM,
-      duration: const Duration(seconds: 2),
-    );
   }
 
   void removeProduct(String product){
