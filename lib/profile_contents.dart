@@ -29,13 +29,13 @@ class _ProfileContentsState extends State<ProfileContents> {
           ),
           child: Image.asset('assets/profile_avatar.png'),
         ),
-        const SizedBox(height: 15,),
+        const SizedBox(height: 10,),
         const Center(
           child: Text(
             'Yash Maniya',
             style: TextStyle(
               color: Colors.white,
-              fontSize: 30,
+              fontSize: 25,
               fontWeight: FontWeight.bold,
               fontFamily: 'Poppins',
             ),
@@ -47,12 +47,12 @@ class _ProfileContentsState extends State<ProfileContents> {
           margin: EdgeInsets.only(left: 20, right: 20),
           color: Color.fromRGBO(255, 30, 10, 0.85),
         ),
-        SizedBox(height: 10),
+        SizedBox(height: 8),
         Container(
-          height: 400,
+          height: 370,
           child: ListView(
             children: [
-              SizedBox(height: 10,),
+              SizedBox(height: 5,),
               makeProfileContent('Edit Profile', Icons.person),
               makeProfileContent('Shipping Address', Icons.location_on),
               makeProfileContent('Wishlist', Icons.favorite_outlined),
@@ -70,7 +70,7 @@ class _ProfileContentsState extends State<ProfileContents> {
   Widget makeProfileContent(String text, icon){
     return Container(
       height: 50,
-      margin: EdgeInsets.only(bottom: 15, left: 15, right: 15),
+      margin: EdgeInsets.only(bottom: 11, left: 15, right: 15),
       decoration: const BoxDecoration(
         color: Color.fromRGBO(100, 100, 100, 0.25),
         borderRadius: BorderRadius.all(Radius.circular(10)),
@@ -79,7 +79,7 @@ class _ProfileContentsState extends State<ProfileContents> {
         highlightColor: Color.fromRGBO(100, 100, 100, 0.3),
         borderRadius: BorderRadius.all(Radius.circular(10)),
         onTap: (){
-          print('Tapped');                         // On Tap
+          print('Tapped');
           },
         child: Row(
           mainAxisAlignment: MainAxisAlignment.start,

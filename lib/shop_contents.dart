@@ -8,6 +8,7 @@ import 'package:boat/cart_controller.dart';
 
 class ShopContents extends StatefulWidget {
   final Map products;
+  
   const ShopContents({Key? key, required this.products}) : super(key: key);
 
   @override
@@ -31,12 +32,11 @@ class _ShopContentsState extends State<ShopContents>
         isScrollable: true,
         labelColor: const Color.fromRGBO(255, 255, 255, 1),
         unselectedLabelColor: Colors.white60,
-        unselectedLabelStyle:
-            TextStyle(fontWeight: FontWeight.w500, fontSize: 14),
-        labelStyle: TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
+        unselectedLabelStyle: const TextStyle(fontWeight: FontWeight.w500, fontSize: 14),
+        labelStyle: const TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
         indicatorColor: const Color.fromRGBO(255, 0, 0, 1),
         indicatorWeight: 3.5,
-        tabs: [
+        tabs: const [
           Tab(
             child: Text('Airdopes'),
           ),
@@ -239,9 +239,59 @@ class _ShopContentsState extends State<ShopContents>
                               splashColor:
                                   Color.fromRGBO(0, 0, 0, 0.2),
                               borderRadius: BorderRadius.all(Radius.circular(5)),
-                              onTap: () {                                         // ADD TO CART Button fn
-                                print('add to cart tapped');
+                              onTap: () {                                                 // ADD TO CART Button fn
                                 cartController.addProduct(allProducts[category][index]);
+
+                                final snackbar = SnackBar(
+                                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                                  behavior: SnackBarBehavior.floating,
+                                  duration: Duration(seconds: 2),
+                                  content: Container(
+                                    height: 55, // 75
+                                    padding: const EdgeInsets.only(left: 10),
+                                    child: Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        const Text(
+                                            'Product added to Cart',
+                                          style: TextStyle(
+                                            fontSize: 20,
+                                            color: Colors.white,
+                                            fontFamily: 'Nunito',
+                                            fontWeight: FontWeight.w900,
+                                          ),
+                                        ),
+                                        const SizedBox(height: 4,),
+                                        Text.rich(TextSpan(
+                                          text: '${allProducts[category][index]['productName']}',
+                                            style: const TextStyle(
+                                              fontSize: 15,
+                                              fontFamily: 'Poppins',
+                                              fontWeight: FontWeight.w200,
+                                              color: Color.fromRGBO(255, 80, 60, 1),
+                                            ),
+                                          children : const <InlineSpan>[
+                                            TextSpan(
+                                              text: ' added successfully !',
+                                              style: TextStyle(
+                                                fontSize: 15,
+                                                fontFamily: 'Nunito',
+                                                fontWeight: FontWeight.w600,
+                                                color: Color.fromRGBO(255, 255, 255, 0.8),
+                                              ),
+                                            ),
+                                          ]
+                                        )),
+                                      ],
+                                    ),
+                                  ),
+                                  // action: SnackBarAction(
+                                  //   label: 'Dismiss',
+                                  //   onPressed: (){},
+                                  // ),
+                                );
+                                
+                                ScaffoldMessenger.of(context)..hideCurrentSnackBar()..showSnackBar(snackbar);
                               },
                               child: Center(
                                 child: Text(

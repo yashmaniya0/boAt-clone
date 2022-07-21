@@ -536,12 +536,19 @@ class _HomePageState extends State<HomePage> {
   List allContents = [
     HomeContents(),
     ShopContents(products: {}),
-    CartContents(),
+    CartContents(toShopContents: (){}),
     ProfileContents()
   ];
   Widget currentBody(ix){
     if (ix==1){
       return ShopContents(products: allProducts);
+    }
+    if (ix==2){
+      return CartContents(toShopContents: (){
+        setState(() {
+          navIndex = 1;
+        });
+      });
     }
     return allContents[ix];
   }
