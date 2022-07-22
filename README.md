@@ -22,7 +22,7 @@ samples, guidance on mobile development, and a full API reference.
   <tr>
     <td>
       <img src="assets/logo.png" height=70 align="left", style="margin:5px 15px"> 
-    <p>An e-commerce app with refreshing UI. Want to buy Airdopes? Or Headphones, or Speakers, or Smart Watches, or fascinating boAt Wearables? Here's the boAt lifestyle app for the need. Buy what you want to with amazing and seemless UI of the app.
+    <p>An e-commerce app with refreshing UI. Want to buy Airdopes? Or Headphones, or Speakers, or Smart Watches, or fascinating boAt Wearables? boAt lifestyle app is all you need. Buy what you want to, with amazing and seemless UI of the app.
       </p>
     </td>
   </tr>
