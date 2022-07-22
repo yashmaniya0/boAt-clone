@@ -1,5 +1,5 @@
 # Boat Clone App 
-An E-commerce app for BOAT lifestyle products, made with Flutter framework.
+An E-commerce app UI for BOAT lifestyle products, made with Flutter framework.
 
 ![start with why](https://img.shields.io/badge/status-in%20progress-yellow.svg?style=flat)
 
@@ -35,15 +35,16 @@ samples, guidance on mobile development, and a full API reference.
      <td>Profile Screen</td>
   </tr>
   <tr>
-    <td><img src="./assets/screenshots/home/ads/home_ad1.png" width=270 ></td>
-    <td><img src="./assets/screenshots/shop/airdopes.png" width=270 ></td>
-    <td><img src="./assets/screenshots/cart/cart.png" width=270 ></td>
-    <td><img src="./assets/screenshots/profile/profile.png" width=270 ></td>
+    <td><img src="./assets/screenshots/home/ads/home_ad1.png" width=200 ></td>
+    <td><img src="./assets/screenshots/shop/airdopes.png" width=200 ></td>
+    <td><img src="./assets/screenshots/cart/cart.png" width=200 ></td>
+    <td><img src="./assets/screenshots/profile/profile.png" width=200 ></td>
   </tr>
  </table>
 
-Please star⭐ the repo if you like what you see.
 <br>
+
+Please star⭐ the repo if you like what you see.
 <br>
 
 
@@ -61,10 +62,10 @@ Please star⭐ the repo if you like what you see.
      <td>Advertisement 5</td>
   </tr>
   <tr>
-     <td><img src="./assets/screenshots/home/ads/home_ad2.png" width=270 ></td>
-     <td><img src="./assets/screenshots/home/ads/home_ad3.png" width=270 ></td>
-     <td><img src="./assets/screenshots/home/ads/home_ad4.png" width=270 ></td>
-     <td><img src="./assets/screenshots/home/ads/home_ad5.png" width=270 ></td>
+     <td><img src="./assets/screenshots/home/ads/home_ad2.png" width=200 ></td>
+     <td><img src="./assets/screenshots/home/ads/home_ad3.png" width=200 ></td>
+     <td><img src="./assets/screenshots/home/ads/home_ad4.png" width=200 ></td>
+     <td><img src="./assets/screenshots/home/ads/home_ad5.png" width=200 ></td>
   </tr>
   <tr>
      <td>boAt-Head Kiara</td>
@@ -73,10 +74,10 @@ Please star⭐ the repo if you like what you see.
      <td>boAt-Head KL Rahul</td>
   </tr>
   <tr>
-    <td><img src="./assets/screenshots/home/boatheads/boathead1.png" width=270 ></td>
-    <td><img src="./assets/screenshots/home/boatheads/boathead2.png" width=270 ></td>
-    <td><img src="./assets/screenshots/home/boatheads/boathead3.png" width=270 ></td>
-    <td><img src="./assets/screenshots/home/boatheads/boathead4.png" width=270 ></td>
+    <td><img src="./assets/screenshots/home/boatheads/boathead1.png" width=200 ></td>
+    <td><img src="./assets/screenshots/home/boatheads/boathead2.png" width=200 ></td>
+    <td><img src="./assets/screenshots/home/boatheads/boathead3.png" width=200 ></td>
+    <td><img src="./assets/screenshots/home/boatheads/boathead4.png" width=200 ></td>
   </tr>
   <tr>
      <td>Empty Search Bar</td>
@@ -85,10 +86,10 @@ Please star⭐ the repo if you like what you see.
      <td>Home Page End</td>
   </tr>
   <tr>
-     <td><img src="./assets/screenshots/search_bar/search_bar.png" width=270 ></td>
-     <td><img src="./assets/screenshots/search_bar/search_on.png" width=270 ></td>
-     <td><img src="./assets/screenshots/drawer/drawer.png" width=270 ></td>
-     <td><img src="./assets/screenshots/home/home_end.png" width=270 ></td>
+     <td><img src="./assets/screenshots/search_bar/search_bar.png" width=200 ></td>
+     <td><img src="./assets/screenshots/search_bar/search_on.png" width=200 ></td>
+     <td><img src="./assets/screenshots/drawer/drawer.png" width=200 ></td>
+     <td><img src="./assets/screenshots/home/home_end.png" width=200 ></td>
   </tr>
   </table>
 </details>
@@ -105,10 +106,10 @@ Please star⭐ the repo if you like what you see.
      <td>Wired Tab</td>
   </tr>
   <tr>
-     <td><img src="./assets/screenshots/shop/airdopes.png" width=270 ></td>
-     <td><img src="./assets/screenshots/shop/headphones.png" width=270 ></td>
-     <td><img src="./assets/screenshots/shop/neckbands.png" width=270 ></td>
-     <td><img src="./assets/screenshots/shop/wired.png" width=270 ></td>
+     <td><img src="./assets/screenshots/shop/airdopes.png" width=200 ></td>
+     <td><img src="./assets/screenshots/shop/headphones.png" width=200 ></td>
+     <td><img src="./assets/screenshots/shop/neckbands.png" width=200 ></td>
+     <td><img src="./assets/screenshots/shop/wired.png" width=200 ></td>
   </tr>
   </table>
   <table>
@@ -118,9 +119,9 @@ Please star⭐ the repo if you like what you see.
      <td>SnackBar Message</td>
   </tr>
   <tr>
-    <td><img src="./assets/screenshots/shop/speakers.png" width=270 ></td>
-    <td><img src="./assets/screenshots/shop/smartwatches.png" width=270 ></td>
-    <td><img src="./assets/screenshots/shop/snackbar.png" width=270 ></td>
+    <td><img src="./assets/screenshots/shop/speakers.png" width=200 ></td>
+    <td><img src="./assets/screenshots/shop/smartwatches.png" width=200 ></td>
+    <td><img src="./assets/screenshots/shop/snackbar.png" width=200 ></td>
   </tr>
   </table>
 </details>
@@ -136,8 +137,8 @@ Please star⭐ the repo if you like what you see.
      <td>Filled Cart</td>
   </tr>
   <tr>
-     <td><img src="./assets/screenshots/cart/empty_cart.png" width=270 ></td>
-     <td><img src="./assets/screenshots/cart/cart.png" width=270 ></td>
+     <td><img src="./assets/screenshots/cart/empty_cart.png" width=200 ></td>
+     <td><img src="./assets/screenshots/cart/cart.png" width=200 ></td>
   </tr>
   </table>
 </details>
@@ -151,7 +152,7 @@ Please star⭐ the repo if you like what you see.
      <td>Profile</td>
   </tr>
   <tr>
-     <td><img src="./assets/screenshots/profile/profile.png" width=270 ></td>
+     <td><img src="./assets/screenshots/profile/profile.png" width=200 ></td>
   </tr>
   </table>
 </details>
@@ -169,10 +170,10 @@ Please star⭐ the repo if you like what you see.
      <td>Cart Demo</td>
   </tr>
   <tr>
-    <td><img src="./assets/screenshots/demo_gifs/home.gif" width=270 ></td>
-    <td><img src="./assets/screenshots/demo_gifs/tabBar.gif" width=270 ></td>
-    <td><img src="./assets/screenshots/demo_gifs/snackbar.gif" width=270 ></td>
-    <td><img src="./assets/screenshots/demo_gifs/cart.gif" width=270 ></td>
+    <td><img src="./assets/screenshots/demo_gifs/home.gif" width=200 ></td>
+    <td><img src="./assets/screenshots/demo_gifs/tabBar.gif" width=200 ></td>
+    <td><img src="./assets/screenshots/demo_gifs/snackbar.gif" width=200 ></td>
+    <td><img src="./assets/screenshots/demo_gifs/cart.gif" width=200 ></td>
   </tr>
   </table>
 </details>
