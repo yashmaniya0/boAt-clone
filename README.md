@@ -17,7 +17,7 @@ For help getting started with Flutter, view our
 samples, guidance on mobile development, and a full API reference.
 
 
-# Listify - Not your everyday todo app!
+# boAt - Buy your electronic wearables here!
 <table>
   <tr>
     <td>
