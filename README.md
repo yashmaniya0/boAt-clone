@@ -42,47 +42,10 @@ samples, guidance on mobile development, and a full API reference.
   </tr>
  </table>
 
-<br> Please star⭐ the repo if you like what you see.
+Please star⭐ the repo if you like what you see.
 <br>
 <br>
 
-
-## Project Environment:
-```
-Flutter 2.5.3 • channel stable • https://github.com/flutter/flutter.git
-Framework • revision 18116933e7 (4 weeks ago) • 2021-10-15 10:46:35 -0700
-Engine • revision d3ea636dc5
-Tools • Dart 2.14.4
-```
-
-## Code Flow:
-Project is following MVC pattern. All the UI components are inside views folder. Business logic is handled inside controller folder. Model is used to parse data.
-
-```
-└── lib/
-    ├── controller/
-    │   └── cart_controller.dart
-    │
-    ├── model/
-    │   └── empty
-    │
-    ├── view/
-    │   └── cart_contents.dart
-    │   └── home_contents.dart
-    │   └── profile_contents.dart
-    │   └── shop_contents.dart
-    │
-    └── main.dart
-```
-
-## Feature List
-```
-├── Appealing Home Screen with a set of Advertisements and Product Categories.
-├── Products with category-wise tabs for easy product tracking.
-├── SnackBar notifications for adding items to cart.
-├── Shopping Cart with controller to manage products and total payable amount.
-└── Profile UI.
-```
 
 ## **Visuals of The Application**
 
@@ -215,6 +178,44 @@ Project is following MVC pattern. All the UI components are inside views folder.
 </details>
 
  <!-- -------------------------------------------------------------------------- -->
+ 
+
+## Project Environment:
+```
+Flutter 2.5.3 • channel stable • https://github.com/flutter/flutter.git
+Framework • revision 18116933e7 (4 weeks ago) • 2021-10-15 10:46:35 -0700
+Engine • revision d3ea636dc5
+Tools • Dart 2.14.4
+```
+
+## Code Flow:
+Project is following MVC pattern. All the UI components are inside views folder. Business logic is handled inside controller folder. Model is used to parse data.
+
+```
+└── lib/
+    ├── controller/
+    │   └── cart_controller.dart
+    │
+    ├── model/
+    │   └── empty
+    │
+    ├── view/
+    │   └── cart_contents.dart
+    │   └── home_contents.dart
+    │   └── profile_contents.dart
+    │   └── shop_contents.dart
+    │
+    └── main.dart
+```
+
+## Feature List
+```
+├── Appealing Home Screen with a set of Advertisements and Product Categories.
+├── Products with category-wise tabs for easy product tracking.
+├── SnackBar notifications for adding items to cart.
+├── Shopping Cart with controller to manage products and total payable amount.
+└── Profile UI.
+```
 
 To learn more about MVC pattern:<br>
 https://medium.flutterdevs.com/design-patterns-in-flutter-part-1-c32a3ddb00e2<br>
