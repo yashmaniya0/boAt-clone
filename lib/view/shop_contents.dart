@@ -1,14 +1,10 @@
-import 'dart:io';
-import 'dart:math';
-
 import 'package:get/get.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:boat/cart_controller.dart';
+import 'package:boat/controller/cart_controller.dart';
 
 class ShopContents extends StatefulWidget {
   final Map products;
-  
+
   const ShopContents({Key? key, required this.products}) : super(key: key);
 
   @override
@@ -17,7 +13,6 @@ class ShopContents extends StatefulWidget {
 
 class _ShopContentsState extends State<ShopContents>
     with TickerProviderStateMixin {
-
   Map allProducts;
   _ShopContentsState(this.allProducts);
 
@@ -32,7 +27,8 @@ class _ShopContentsState extends State<ShopContents>
         isScrollable: true,
         labelColor: const Color.fromRGBO(255, 255, 255, 1),
         unselectedLabelColor: Colors.white60,
-        unselectedLabelStyle: const TextStyle(fontWeight: FontWeight.w500, fontSize: 14),
+        unselectedLabelStyle:
+            const TextStyle(fontWeight: FontWeight.w500, fontSize: 14),
         labelStyle: const TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
         indicatorColor: const Color.fromRGBO(255, 0, 0, 1),
         indicatorWeight: 3.5,
@@ -78,15 +74,15 @@ class _ShopContentsState extends State<ShopContents>
       padding: EdgeInsets.only(top: 15),
       child: ListView.builder(
         itemCount: allProducts[category].length,
-        itemBuilder: (BuildContext context, int ix){
+        itemBuilder: (BuildContext context, int ix) {
           return _buildProductCard(allProducts, category, ix);
         },
       ),
     );
   }
 
-  Widget _buildProductCard(Map<dynamic, dynamic> allProducts, String category, int index) {
-
+  Widget _buildProductCard(
+      Map<dynamic, dynamic> allProducts, String category, int index) {
     final cartController = Get.put(CartController());
 
     String productImage = allProducts[category][index]['productImage'];
@@ -157,7 +153,8 @@ class _ShopContentsState extends State<ShopContents>
                           height: 5,
                         ),
                         Row(
-                          children: List<int>.generate(6, (i) => i + 1).map((i) {
+                          children:
+                              List<int>.generate(6, (i) => i + 1).map((i) {
                             if (i <= filledStars) {
                               return Icon(
                                 Icons.star,
@@ -236,24 +233,28 @@ class _ShopContentsState extends State<ShopContents>
                             color: Colors.transparent,
                             child: InkWell(
                               highlightColor: Color.fromRGBO(0, 0, 0, 0.1),
-                              splashColor:
-                                  Color.fromRGBO(0, 0, 0, 0.2),
-                              borderRadius: BorderRadius.all(Radius.circular(5)),
-                              onTap: () {                                                 // ADD TO CART Button fn
-                                cartController.addProduct(allProducts[category][index]);
+                              splashColor: Color.fromRGBO(0, 0, 0, 0.2),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(5)),
+                              onTap: () {
+                                // ADD TO CART Button fn
+                                cartController
+                                    .addProduct(allProducts[category][index]);
 
                                 final snackbar = SnackBar(
-                                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(20)),
                                   behavior: SnackBarBehavior.floating,
                                   duration: Duration(seconds: 2),
                                   content: Container(
                                     height: 55, // 75
                                     padding: const EdgeInsets.only(left: 10),
                                     child: Column(
-                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
                                       children: [
                                         const Text(
-                                            'Product added to Cart',
+                                          'Product added to Cart',
                                           style: TextStyle(
                                             fontSize: 20,
                                             color: Colors.white,
@@ -261,27 +262,31 @@ class _ShopContentsState extends State<ShopContents>
                                             fontWeight: FontWeight.w900,
                                           ),
                                         ),
-                                        const SizedBox(height: 4,),
+                                        const SizedBox(
+                                          height: 4,
+                                        ),
                                         Text.rich(TextSpan(
-                                          text: '${allProducts[category][index]['productName']}',
+                                            text:
+                                                '${allProducts[category][index]['productName']}',
                                             style: const TextStyle(
                                               fontSize: 15,
                                               fontFamily: 'Poppins',
                                               fontWeight: FontWeight.w200,
-                                              color: Color.fromRGBO(255, 80, 60, 1),
+                                              color: Color.fromRGBO(
+                                                  255, 80, 60, 1),
                                             ),
-                                          children : const <InlineSpan>[
-                                            TextSpan(
-                                              text: ' added successfully !',
-                                              style: TextStyle(
-                                                fontSize: 15,
-                                                fontFamily: 'Nunito',
-                                                fontWeight: FontWeight.w600,
-                                                color: Color.fromRGBO(255, 255, 255, 0.8),
+                                            children: const <InlineSpan>[
+                                              TextSpan(
+                                                text: ' added successfully !',
+                                                style: TextStyle(
+                                                  fontSize: 15,
+                                                  fontFamily: 'Nunito',
+                                                  fontWeight: FontWeight.w600,
+                                                  color: Color.fromRGBO(
+                                                      255, 255, 255, 0.8),
+                                                ),
                                               ),
-                                            ),
-                                          ]
-                                        )),
+                                            ])),
                                       ],
                                     ),
                                   ),
@@ -290,8 +295,10 @@ class _ShopContentsState extends State<ShopContents>
                                   //   onPressed: (){},
                                   // ),
                                 );
-                                
-                                ScaffoldMessenger.of(context)..hideCurrentSnackBar()..showSnackBar(snackbar);
+
+                                ScaffoldMessenger.of(context)
+                                  ..hideCurrentSnackBar()
+                                  ..showSnackBar(snackbar);
                               },
                               child: Center(
                                 child: Text(
@@ -314,7 +321,9 @@ class _ShopContentsState extends State<ShopContents>
             ),
           ),
         ),
-        SizedBox(height: 7,)
+        SizedBox(
+          height: 7,
+        )
       ],
     );
   }

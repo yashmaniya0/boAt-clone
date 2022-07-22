@@ -1,19 +1,17 @@
-import 'dart:io';
-
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
-import 'package:boat/cart_controller.dart';
+import 'package:boat/controller/cart_controller.dart';
 
 class CartContents extends StatefulWidget {
   final Function toShopContents;
-  const CartContents({Key? key, required this.toShopContents}) : super(key: key);
+  const CartContents({Key? key, required this.toShopContents})
+      : super(key: key);
 
   @override
   State<CartContents> createState() => _CartContentsState(toShopContents);
 }
 
 class _CartContentsState extends State<CartContents> {
-
   Function toShopContents;
   CartController controller = Get.find();
 
@@ -21,13 +19,12 @@ class _CartContentsState extends State<CartContents> {
 
   @override
   Widget build(BuildContext context) {
-    if (controller.itemsInCart==0){
+    if (controller.itemsInCart == 0) {
       return Stack(
         children: [
           Container(
-            margin: EdgeInsets.only(left: 35, top: 40),
-              child: Image.asset('assets/empty_cart.png')
-          ),
+              margin: EdgeInsets.only(left: 35, top: 40),
+              child: Image.asset('assets/empty_cart.png')),
           Container(
             height: 500,
             margin: EdgeInsets.only(top: 120),
@@ -55,10 +52,9 @@ class _CartContentsState extends State<CartContents> {
               color: Colors.transparent,
               child: InkWell(
                 highlightColor: Color.fromRGBO(0, 0, 0, 0.1),
-                splashColor:
-                Color.fromRGBO(0, 0, 0, 0.25),
+                splashColor: Color.fromRGBO(0, 0, 0, 0.25),
                 borderRadius: BorderRadius.all(Radius.circular(5)),
-                onTap: () async{
+                onTap: () async {
                   await Future.delayed(Duration(milliseconds: 30));
                   toShopContents();
                 },
@@ -78,18 +74,19 @@ class _CartContentsState extends State<CartContents> {
       );
     }
     return Obx(
-      ()=> Column(
+      () => Column(
         children: [
           Container(
             height: 520, //580
             child: ListView.builder(
               itemCount: controller.products.length,
-                itemBuilder: (BuildContext context, int ix){
-                  return Obx(()=> _buildProductCard(controller.products.values.toList()[ix]));
-                },
+              itemBuilder: (BuildContext context, int ix) {
+                return Obx(() =>
+                    _buildProductCard(controller.products.values.toList()[ix]));
+              },
             ),
           ),
-          SizedBox(height:7),
+          SizedBox(height: 7),
           Container(
             height: 80,
             width: 365,
@@ -99,13 +96,17 @@ class _CartContentsState extends State<CartContents> {
             ),
             child: Row(
               children: [
-                SizedBox(width: 20,),
+                SizedBox(
+                  width: 20,
+                ),
                 Container(
                   width: 120,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SizedBox(height: 16,),
+                      SizedBox(
+                        height: 16,
+                      ),
                       Text(
                         'Grand Total',
                         style: TextStyle(
@@ -123,7 +124,9 @@ class _CartContentsState extends State<CartContents> {
                     ],
                   ),
                 ),
-                SizedBox(width: 57,),
+                SizedBox(
+                  width: 57,
+                ),
                 Container(
                   height: 50,
                   width: 150,
@@ -135,8 +138,7 @@ class _CartContentsState extends State<CartContents> {
                     color: Colors.transparent,
                     child: InkWell(
                       highlightColor: Color.fromRGBO(0, 0, 0, 0.1),
-                      splashColor:
-                      Color.fromRGBO(0, 0, 0, 0.25),
+                      splashColor: Color.fromRGBO(0, 0, 0, 0.25),
                       borderRadius: BorderRadius.all(Radius.circular(5)),
                       onTap: () {},
                       child: Center(
@@ -159,28 +161,32 @@ class _CartContentsState extends State<CartContents> {
     );
   }
 
-
   Widget _buildProductCard(Map<dynamic, dynamic> product) {
-
     final cartController = controller;
 
     String productImage = product['productImage'];
     String productName = product['productName'];
-    int buyPrice = product['buyPrice']*cartController.products[productName]['itemCount'];
-    int mrp = product['mrp']*cartController.products[productName]['itemCount'];
+    int buyPrice =
+        product['buyPrice'] * cartController.products[productName]['itemCount'];
+    int mrp =
+        product['mrp'] * cartController.products[productName]['itemCount'];
     int saved = (mrp - buyPrice);
 
     RegExp expression = RegExp(r'(\d{1,3})(?=(\d{3})+(?!\d))');
 
-    String fsaved = saved.toString().replaceAllMapped(expression, (Match m) => '${m[1]},');
+    String fsaved =
+        saved.toString().replaceAllMapped(expression, (Match m) => '${m[1]},');
     String fbuyPrice = buyPrice
         .toString()
         .replaceAllMapped(expression, (Match m) => '${m[1]},');
-    String fmrp = mrp.toString().replaceAllMapped(expression, (Match m) => '${m[1]},');
+    String fmrp =
+        mrp.toString().replaceAllMapped(expression, (Match m) => '${m[1]},');
 
     return Column(
       children: [
-        SizedBox(height: 7,),
+        SizedBox(
+          height: 7,
+        ),
         Container(
           margin: EdgeInsets.only(left: 5, right: 5),
           child: InkWell(
@@ -275,15 +281,19 @@ class _CartContentsState extends State<CartContents> {
                             SizedBox(
                               width: 128,
                               child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
                                 children: [
                                   IconButton(
-                                      onPressed: (){
-                                        cartController.removeProduct(productName);
+                                      onPressed: () {
+                                        cartController
+                                            .removeProduct(productName);
                                         setState(() {});
                                       },
-                                      icon: Icon(Icons.remove_circle, size: 25,)
-                                  ),
+                                      icon: Icon(
+                                        Icons.remove_circle,
+                                        size: 25,
+                                      )),
                                   Text(
                                     '${cartController.products[productName]['itemCount']}',
                                     style: TextStyle(
@@ -291,22 +301,27 @@ class _CartContentsState extends State<CartContents> {
                                     ),
                                   ),
                                   IconButton(
-                                      onPressed: (){
+                                      onPressed: () {
                                         cartController.addFromCart(productName);
                                       },
-                                      icon: Icon(Icons.add_circle, size: 25,)
-                                  ),
+                                      icon: Icon(
+                                        Icons.add_circle,
+                                        size: 25,
+                                      )),
                                 ],
                               ),
                             ),
                             IconButton(
-                              onPressed: (){
+                              onPressed: () {
                                 cartController.deleteProduct(productName);
                                 setState(() {});
                               },
-                              icon: Icon(Icons.delete, size: 30,),
+                              icon: Icon(
+                                Icons.delete,
+                                size: 30,
+                              ),
                             ),
-                            SizedBox(width:2),
+                            SizedBox(width: 2),
                           ],
                         )
                       ],
@@ -321,5 +336,3 @@ class _CartContentsState extends State<CartContents> {
     );
   }
 }
-
-

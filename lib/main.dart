@@ -1,12 +1,10 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:boat/home_contents.dart';
-import 'package:boat/shop_contents.dart';
-import 'package:boat/cart_contents.dart';
-import 'package:boat/profile_contents.dart';
-import 'package:boat/cart_controller.dart';
+import 'package:boat/view/home_contents.dart';
+import 'package:boat/view/shop_contents.dart';
+import 'package:boat/view/cart_contents.dart';
+import 'package:boat/view/profile_contents.dart';
+import 'package:boat/controller/cart_controller.dart';
 
 void main() => runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -38,7 +36,6 @@ class _HomePageState extends State<HomePage> {
 
   // for drawer
   final drawerItems = List<int>.generate(10, (i) => i + 1);
-
 
   // for cart contents
   final cartController = Get.put(CartController());
@@ -536,15 +533,15 @@ class _HomePageState extends State<HomePage> {
   List allContents = [
     HomeContents(),
     ShopContents(products: {}),
-    CartContents(toShopContents: (){}),
+    CartContents(toShopContents: () {}),
     ProfileContents()
   ];
-  Widget currentBody(ix){
-    if (ix==1){
+  Widget currentBody(ix) {
+    if (ix == 1) {
       return ShopContents(products: allProducts);
     }
-    if (ix==2){
-      return CartContents(toShopContents: (){
+    if (ix == 2) {
+      return CartContents(toShopContents: () {
         setState(() {
           navIndex = 1;
         });
@@ -629,7 +626,8 @@ class _HomePageState extends State<HomePage> {
       drawer: Drawer(
           backgroundColor: const Color.fromRGBO(20, 20, 20, 1),
           child: ListView(
-            children: drawerItems.map((val) => Container(
+            children: drawerItems
+                .map((val) => Container(
                       margin:
                           const EdgeInsets.only(top: 10, left: 10, right: 10),
                       decoration: BoxDecoration(
@@ -649,10 +647,8 @@ class _HomePageState extends State<HomePage> {
                     ))
                 .toList(),
           )),
-
       backgroundColor: const Color.fromRGBO(50, 50, 50, 0.3),
       body: currentBody(navIndex),
-
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         selectedItemColor: const Color.fromRGBO(255, 0, 0, 1),
