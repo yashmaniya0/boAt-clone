@@ -1,7 +1,7 @@
 # Boat Clone App 
 An E-commerce app for BOAT lifestyle products, made with Flutter framework.
 
-![start with why](https://img.shields.io/badge/status-in%20progress-brightgreen.svg?style=flat)
+![start with why](https://img.shields.io/badge/status-in%20progress-yellow.svg?style=flat)
 
 ## Getting Started
 
