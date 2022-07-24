@@ -3,6 +3,10 @@ An E-commerce app UI for BOAT lifestyle products, made with Flutter framework.
 
 ![start with why](https://img.shields.io/badge/status-in%20progress-yellow.svg?style=flat)
 
+[![Android](https://img.shields.io/badge/Android-128605?style=for-the-badge&logo=android&logoColor=white)]()
+[![ios](https://img.shields.io/badge/iOS-101010?style=for-the-badge&logo=apple&logoColor=white)]()
+[![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white)]()
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
@@ -41,6 +45,21 @@ samples, guidance on mobile development, and a full API reference.
     <td><img src="./assets/screenshots/profile/profile.png" width=230 ></td>
   </tr>
  </table>
+
+<table>
+  <tr>
+     <td>Home Demo</td>
+     <td>Tab bar Demo</td>
+     <td>Snackbar Demo</td>
+     <td>Cart Demo</td>
+  </tr>
+  <tr>
+    <td><img src="./assets/screenshots/demo_gifs/home.gif" width=230 ></td>
+    <td><img src="./assets/screenshots/demo_gifs/tabBar.gif" width=230 ></td>
+    <td><img src="./assets/screenshots/demo_gifs/snackbar.gif" width=230 ></td>
+    <td><img src="./assets/screenshots/demo_gifs/cart.gif" width=230 ></td>
+  </tr>
+  </table>
 
 <br>
 
@@ -153,27 +172,6 @@ Please star⭐ the repo if you like what you see.
   </tr>
   <tr>
      <td><img src="./assets/screenshots/profile/profile.png" width=230 ></td>
-  </tr>
-  </table>
-</details>
-
-<!-- ---------------------------------- Demo ---------------------------------------- -->
-
-
-<details>
-  <summary> <b>Demo</b></summary><br/>
-  <table>
-  <tr>
-     <td>Home Demo</td>
-     <td>Tab bar Demo</td>
-     <td>Snackbar Demo</td>
-     <td>Cart Demo</td>
-  </tr>
-  <tr>
-    <td><img src="./assets/screenshots/demo_gifs/home.gif" width=230 ></td>
-    <td><img src="./assets/screenshots/demo_gifs/tabBar.gif" width=230 ></td>
-    <td><img src="./assets/screenshots/demo_gifs/snackbar.gif" width=230 ></td>
-    <td><img src="./assets/screenshots/demo_gifs/cart.gif" width=230 ></td>
   </tr>
   </table>
 </details>
