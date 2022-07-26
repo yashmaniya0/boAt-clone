@@ -1,25 +1,15 @@
 # Boat Clone App 
 An E-commerce app UI for BOAT lifestyle products, made with Flutter framework.
 
-![start with why](https://img.shields.io/badge/status-in%20progress-yellow.svg?style=flat)
+![GitHub Workflow Status](https://img.shields.io/badge/Build-passing-default.svg?style=flat&logo=github&logoColor=white)
+[![Flutter Version](https://img.shields.io/badge/Flutter-3.1.0-%2302569B.svg?logo=Flutter&logoColor=white)](https://flutter.dev/docs/get-started/install)
+[![Dart SDK Version](https://img.shields.io/badge/Dart_SDK-%3E%3D2.16.1_%3C3.0.0-%2302569B.svg?logo=dart&logoColor=white)]()
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/yashmaniya0/boAt-clone/blob/main/LICENSE)
 
 [![Android](https://img.shields.io/badge/Android-128605?style=for-the-badge&logo=android&logoColor=white)]()
-[![ios](https://img.shields.io/badge/iOS-101010?style=for-the-badge&logo=apple&logoColor=white)]()
 [![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white)]()
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-
+<br>
 
 # boAt - Buy your electronic wearables here!
 <table>
@@ -49,15 +39,15 @@ samples, guidance on mobile development, and a full API reference.
 <table>
   <tr>
      <td>Home Demo</td>
+     <td>Cart Demo</td>
      <td>Tab bar Demo</td>
      <td>Snackbar Demo</td>
-     <td>Cart Demo</td>
   </tr>
   <tr>
     <td><img src="./assets/screenshots/demo_gifs/home.gif" width=230 ></td>
+    <td><img src="./assets/screenshots/demo_gifs/cart.gif" width=230 ></td>
     <td><img src="./assets/screenshots/demo_gifs/tabBar.gif" width=230 ></td>
     <td><img src="./assets/screenshots/demo_gifs/snackbar.gif" width=230 ></td>
-    <td><img src="./assets/screenshots/demo_gifs/cart.gif" width=230 ></td>
   </tr>
   </table>
 
@@ -179,12 +169,14 @@ Please star⭐ the repo if you like what you see.
  <!-- -------------------------------------------------------------------------- -->
  
 
+ <br>
+
 ## Project Environment:
 ```
-Flutter 2.5.3 • channel stable • https://github.com/flutter/flutter.git
-Framework • revision 18116933e7 (4 weeks ago) • 2021-10-15 10:46:35 -0700
-Engine • revision d3ea636dc5
-Tools • Dart 2.14.4
+Flutter 3.1.0-0.0.pre.1843 • channel master • https://github.com/flutter/flutter.git
+Framework • revision 438eaf7fed (18 hours ago) • 2022-07-25 08:56:06 -0400
+Engine • revision 51b188c54b
+Tools • Dart 2.19.0 (build 2.19.0-33.0.dev) • DevTools 2.15.0
 ```
 
 ## Code Flow:
